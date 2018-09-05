@@ -1,0 +1,86 @@
+[
+    {
+        "name": "KV2_Body",
+        "imageName": "KV2",
+        "sprite": [0, 0]
+    },
+    {
+        "name": "KV2_Cannon",
+        "imageName": "KV2",
+        "sprite": [1, 0]
+    },
+    {
+        "name": "Drone",
+        "imageName": "drone"
+    },
+    {
+        "name": "Laser_Base",
+        "imageName": "laser",
+        "sprite": [0, 0]
+    },
+    {
+        "name": "Laser_Turret",
+        "imageName": "laser",
+        "sprite": [1, 0]
+    },
+    {
+        "name": "Locator",
+        "imageName": "locator"
+    },
+    {
+        "name": "Tank_Shell",
+        "imageName": "tankShell"
+    },
+    {
+        "name": "Rock_1",
+        "imageName": "rock",
+        "sprite": [0, 0]
+    },
+    {
+        "name": "Rock_2",
+        "imageName": "rock",
+        "sprite": [1, 0]
+    },
+    {
+        "name": "Rock_3",
+        "imageName": "rock",
+        "sprite": [2, 0]
+    },
+    {
+        "name": "Rock_4",
+        "imageName": "rock",
+        "sprite": [0, 1]
+    },
+    {
+        "name": "Rock_5",
+        "imageName": "rock",
+        "sprite": [1, 1]
+    },
+    {
+        "name": "Rock_6",
+        "imageName": "rock",
+        "sprite": [2, 1]
+    },
+    {
+        "name": "PzKpfw_Body",
+        "imageName": "PzKpfw",
+        "sprite": [0, 0]
+    },
+    {
+        "name": "PzKpfw_Cannon",
+        "imageName": "PzKpfw_cannon",
+        "animation": {
+            "fps": "32"
+        }
+    },
+    {
+        "name": "Alien_Body",
+        "imageName": "alienShip",
+        "sprite": [0, 0]
+    },
+    {
+        "name": "Alien_Cannon",
+        "imageName": "alienShip",
+        "sprite": [1, 0]
+    }
+]
