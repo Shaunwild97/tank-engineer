@@ -1,22 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.vobis.tankengineer.gui;
 
 import com.vobis.tankengineer.TankEngineer;
-import com.vobis.tankengineer.entity.*;
-import com.vobis.tankengineer.level.Level;
-import com.vobis.tankengineer.level.TankCreatorLevel;
-import com.vobis.tankengineer.render.ModelLoader;
+import com.vobis.tankengineer.entity.EntityModular;
 import com.vobis.tankengineer.render.Screen;
 import com.vobis.tankengineer.serialize.VehicleIO;
 
 import java.util.List;
 
 /**
- *
  * @author Shaun
  */
 public class GuiTankSelection extends GuiBase {
