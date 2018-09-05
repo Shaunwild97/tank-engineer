@@ -47,44 +47,52 @@ public class Screen {
         int height = game.container.getHeight();
 
         if (game.gameWorld != null) {
-            int tSize = 512;
-
-            float nx = width / tSize / scale;
-            float ny = height / tSize / scale;
-
-            int sx = (int) (xScroll / tSize);
-            int sy = (int) (yScroll / tSize);
-
-            for (int i = sx - 10; i < sx + nx + 2; i++) {
-                for (int j = sy - 10; j < sy + ny + 2; j++) {
-                    drawImage(Resources.concrete, i * tSize, +j * tSize);
-                }
-            }
-
-            for (int i = 0; i < game.gameWorld.entities.size(); i++) {
-                Entity e = game.gameWorld.entities.get(i);
-                e.render(this);
-            }
+            drawBackground(game, width, height);
         }
 
         if (game.hovered != null) {
-            Polygon polygon = game.hovered.getCollisionPolygon();
-
-            float minX = polygon.getMinX();
-            float minY = polygon.getMinY();
-            float maxX = polygon.getMaxX();
-            float maxY = polygon.getMaxY();
-
-            drawImage(Resources.hovered.getSprite(0, 0), minX, minY);
-            drawImage(Resources.hovered.getSprite(1, 0), maxX, minY);
-            drawImage(Resources.hovered.getSprite(0, 1), minX, maxY);
-            drawImage(Resources.hovered.getSprite(1, 1), maxX, maxY);
+            drawHoveredSprite(game);
         }
 
         g.resetTransform();
 
         for (GuiBase gui : game.guiStack) {
             gui.render(this);
+        }
+    }
+
+    private void drawHoveredSprite(TankEngineer game) {
+        Polygon polygon = game.hovered.getCollisionPolygon();
+
+        float minX = polygon.getMinX();
+        float minY = polygon.getMinY();
+        float maxX = polygon.getMaxX();
+        float maxY = polygon.getMaxY();
+
+        drawImage(Resources.hovered.getSprite(0, 0), minX, minY);
+        drawImage(Resources.hovered.getSprite(1, 0), maxX, minY);
+        drawImage(Resources.hovered.getSprite(0, 1), minX, maxY);
+        drawImage(Resources.hovered.getSprite(1, 1), maxX, maxY);
+    }
+
+    private void drawBackground(TankEngineer game, int width, int height) {
+        int tSize = 512;
+
+        float nx = width / tSize / scale;
+        float ny = height / tSize / scale;
+
+        int sx = (int) (xScroll / tSize);
+        int sy = (int) (yScroll / tSize);
+
+        for (int i = sx - 10; i < sx + nx + 2; i++) {
+            for (int j = sy - 10; j < sy + ny + 2; j++) {
+                drawImage(Resources.concrete, i * tSize, +j * tSize);
+            }
+        }
+
+        for (int i = 0; i < game.gameWorld.entities.size(); i++) {
+            Entity e = game.gameWorld.entities.get(i);
+            e.render(this);
         }
     }
 

@@ -22,3 +22,7 @@ Set VM Argument
 -Djava.library.path=target/natives
 ```
 
+#### Note
+
+This application requires the lombok plugin installed on your IDE to run.
+
